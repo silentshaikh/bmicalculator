@@ -29,7 +29,7 @@ function Context({children}:ContextChild) {
     const submitForm = (e:FormEvent<HTMLFormElement>) => {
       console.log(inputState.height,inputState.weight)
       e.preventDefault();
-      let numRegex = /^[0-9]+$/;
+      const numRegex = /^[0-9]+$/;
       if(!inputState.height.match(numRegex) || !inputState.weight.match(numRegex)){
         setError("Please Enter Number Only");
         setTimeout(() => {
@@ -88,7 +88,7 @@ export default Context;
 
 //Custom Hook
 const useCustomHook = () => {
-  let bmiContext = useContext(BmiContext);
+  const bmiContext = useContext(BmiContext);
   if(!bmiContext){
     throw new Error("useCustomHook must be used within a ColorContext.Provider");
   };

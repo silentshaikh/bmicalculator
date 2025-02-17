@@ -8,7 +8,7 @@ const kanit = Kanit({
   display: 'swap', 
 });
 function BmiValue() {
-    const {categ,personBmi,err} = useCustomHook();
+    const {categ,personBmi} = useCustomHook();
     const bmiCateg = `${categ} : `;
   return (
     <>

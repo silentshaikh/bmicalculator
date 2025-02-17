@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 function ImageForm() {
@@ -5,7 +6,7 @@ function ImageForm() {
   return (
     <>
     <h1 className=' text-xl'>BMI CALCULATOR</h1>
-     <img className='w-52 mx-auto' src={personImg} alt="person-image" /> 
+     <Image className='w-52 mx-auto' src={personImg} alt="person-image" height={100} width={100} /> 
     </>
   );
 }
